@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px; // It is fixed for all buttons in the design system
+  border-radius: 33px;
+  padding: 0 16px;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.main {
+  background-color: $primary-main;
+  color: $white;
+}
+
+.main:hover {
+  background-color: darken($primary-main, 10%);
+}
+
+.dark {
+  background-color: $primary-dark;
+  color: $white;
+}
+
+.dark:hover {
+  background-color: darken($primary-dark, 10%);
+}
+
+.light{
+    background-color: $primary-light;
+  color: $white;
+}
+
+.light:hover {
+  background-color: darken($primary-light, 10%);
+}

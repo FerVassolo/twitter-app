@@ -1,0 +1,36 @@
+@import "./../../styles/media.scss";
+@import "./../../styles/variables.scss";
+
+.container{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  // Width en Figma es 332px, pero restandole los paddings de los costados es 300px
+  // Haciendo regla de 3 simples: 19.8%
+  // aunque, pensandolo bien, y viendo como hace twitter real, el tamaño de la sidebar es FIJO.
+  width: $sidebar-width;
+  height: 100vh;
+  padding: $sidebar-padding $sidebar-padding 0 $sidebar-padding;
+  z-index: 1;
+}
+
+.imageContainer{
+    width: 56px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    width: 20px;
+    height: auto;
+}
+
+//@include mobile{
+//  .container{
+//    flex-direction: row;
+//    width: 100%;
+//  }
+//}

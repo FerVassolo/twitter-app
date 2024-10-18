@@ -1,0 +1,30 @@
+@import "../../../../styles/variables.scss";
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid $container-line;
+}
+
+.tab{
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selectedText{
+  width: 70px;
+  border-bottom: 2px solid $primary-main;
+  padding-top: 16px;
+  padding-bottom: 24px; // gap between text and underline
+}
+
+.unselectedText{
+    width: 70px;
+    padding-top: 16px;
+    padding-bottom: 24px; // gap between text and underline
+    color: $text-2;
+}

@@ -1,0 +1,25 @@
+$primary-main: #4A99E9;
+$primary-light: #A5CCF4;
+$primary-dark: #428AD2;
+$state-error: #E03C39;
+
+// Grayscale
+$black: #000;
+$white: #fff;
+$text-2: #566370;
+$container-line: #F0F3F4;
+
+// MEASUREMENTS
+
+// Side Bar
+$sidebar-width: 300px;
+$sidebar-padding: 16px;
+
+// Main
+$main-width: 602px;
+$main-padding: 16px;
+$main-container-width: $main-width - $main-padding*2; // width menos el padding
+
+
+// profile image
+$avatar-primary-size: 48px;

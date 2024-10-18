@@ -1,0 +1,6 @@
+.App{
+  /*This margins maintain the proportions from the Figma*/
+  display: flex;
+  flex-direction: row;
+  margin: 0 5.3% 0 8.2%;
+}
