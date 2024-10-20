@@ -1,7 +1,7 @@
 import styles from './newTweet.module.scss';
-import ProfileImage from "../../../../components/profileImage/profileImage";
-import Typography from "../../../../components/commons/typography/typography";
-import Button from "../../../../components/button/button";
+import ProfileImage from "../../../../../components/profileImage/profileImage";
+import Typography from "../../../../../components/commons/typography/typography";
+import Button from "../../../../../components/button/button";
 
 export default function NewTweet(){
     return(

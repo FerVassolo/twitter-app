@@ -15,17 +15,19 @@ type ButtonProps = {
 };
 export default function Button(
     {children,
-    variant = "main",
-    color = "",
-    className = "",
-    onClick}: ButtonProps){
+        variant = "main",
+        color = "",
+        className = "",
+        onClick}: ButtonProps){
+
     return(
         <button
             onClick={onClick}
             className={`
                 ${styles.button} 
                 ${styles[variant]} 
-                ${className}`}
+                ${className}
+            `}
             style={{ backgroundColor: color }}
         >
             <Typography fontWeight={"800"} fontSize={"15px"}>{children}</Typography>

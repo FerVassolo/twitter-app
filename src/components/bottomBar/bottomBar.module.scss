@@ -1,0 +1,23 @@
+@import "./../../styles/media.scss";
+@import "./../../styles/variables.scss";
+.container{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: $bottom-bar-height;
+  background-color: white;
+  align-items: center;
+  justify-content:center;
+  bottom: 0;
+  box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+}

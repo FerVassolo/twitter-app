@@ -1,5 +1,5 @@
 import styles from './tabs.module.scss';
-import Typography from "../../../../components/commons/typography/typography";
+import Typography from "../../../../../components/commons/typography/typography";
 
 export default function Tabs(){
     return(

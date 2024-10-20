@@ -1,9 +1,11 @@
-@import "../../../../styles/variables.scss";
+@import "../../../../../styles/variables";
+@import "../../../../../styles/media";
 .container {
   display: flex;
   flex-direction: row;
   width: 100%;
-  border-bottom: 1px solid $container-line;
+  // ITS BORDER BOTTOM IS IN THE MAIN FEED
+    border-bottom: 1px solid $container-line;
 }
 
 .tab{
@@ -28,3 +30,4 @@
     padding-bottom: 24px; // gap between text and underline
     color: $text-2;
 }
+

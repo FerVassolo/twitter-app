@@ -2,23 +2,38 @@ $primary-main: #4A99E9;
 $primary-light: #A5CCF4;
 $primary-dark: #428AD2;
 $state-error: #E03C39;
+$red: #E03C39; // same as state error, but with a different purpose (likes, mainly)
 
 // Grayscale
 $black: #000;
 $white: #fff;
 $text-2: #566370;
 $container-line: #F0F3F4;
+$inactive-bg: #F0F3F4;
 
 // MEASUREMENTS
 
 // Side Bar
 $sidebar-width: 300px;
 $sidebar-padding: 16px;
+$icon-size: 24px;
+$sidebar-responsive-1: 56px;
+$bottom-bar-height: 48px;
 
 // Main
 $main-width: 602px;
 $main-padding: 16px;
 $main-container-width: $main-width - $main-padding*2; // width menos el padding
+
+// Right Side Home
+$right-home-padding: 16px;
+$right-home-width: 360px;
+
+// Home
+$home-width:1310px;
+$home-responsive-1: 1034px;
+$home-responsive-2: $home-responsive-1 - $right-home-width - $right-home-padding; // 674px
+
 
 
 // profile image

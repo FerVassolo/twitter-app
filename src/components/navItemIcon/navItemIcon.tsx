@@ -1,16 +1,16 @@
 import styles from './navItemIcon.module.scss';
-import Typography from "../../../commons/typography/typography";
+import Typography from "../commons/typography/typography";
 
 type ItemIconProps = {
     icon: string;
     filledIcon: string;
-    text: string;
+    text?: string;
     isSelected: boolean
 }
 
 
 export default function NavItemIcon(
-    { icon, filledIcon, text, isSelected} : ItemIconProps)
+    { icon, filledIcon, text="", isSelected} : ItemIconProps)
 {
     return(
         <div className={styles.container}>

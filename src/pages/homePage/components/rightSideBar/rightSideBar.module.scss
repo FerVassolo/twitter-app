@@ -1,0 +1,38 @@
+@import "../../../../styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: $right-home-padding;
+  width: $right-home-width;
+}
+
+.searchBar {
+  width: $right-home-width;
+  position: fixed;
+  top: 24px;  // Fijamos 24px desde la parte superior
+  z-index: 1;
+}
+
+
+.innerContainer {
+  position: sticky;
+  top: 89px;
+  transition: transform 0.4s ease-in-out; // Transición suave al cambiar el estado
+}
+
+.stuckContainer {
+  position: fixed;
+  bottom: 0;
+  width: $right-home-width;
+  transition: transform 0.4s ease-in-out; // Transición suave para la posición "fija"
+}
+
+.smallContainer {
+  position: fixed;
+  top: 89px;
+  width: $right-home-width;
+}
+
+// puedo probar poner una linea imaginaria.

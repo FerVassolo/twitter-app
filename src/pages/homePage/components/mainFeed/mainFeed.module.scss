@@ -1,23 +1,74 @@
 @import "../../../../styles/variables.scss";
-
-
-.container{
-  position: absolute;
+@import "../../../../styles/media.scss";
+.container {
   display: flex;
   flex-direction: column;
-  // Width en Figma es 332px, pero restandole los paddings de los costados es 300px
-  // Haciendo regla de 3 simples: 19.8%
-  // aunque, pensandolo bien, y viendo como hace twitter real, el tamaño de la sidebar es FIJO.
   width: $main-width;
   border-right: 1px solid $container-line;
   border-left: 1px solid $container-line;
-  height: 100%; // Borrar en un futuro
 }
 
-.header{
+.header {
+  position: sticky; // no está andando como quiero
+  top: 0;
+  width: $main-width;
+  background-color: $white;
+  z-index: 1;
+}
+
+.pageName {
   padding: $main-padding;
-  width: $main-container-width;
 }
 
-.tab{
+.innerContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: $main-width;
+}
+
+.responsiveTitle {
+  display: none;
+}
+
+@include tablet {
+  .container {
+    width: 100%;
+    border: none;
+  }
+
+  .innerContainer {
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .pageName {
+    display: none;
+  }
+
+  .newTweet {
+    display: none;
+  }
+
+  .responsiveTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $main-padding;
+  }
+
+  .image {
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: auto;
+  }
+
+  .emptyDiv {
+    width: 48px;
+  }
 }

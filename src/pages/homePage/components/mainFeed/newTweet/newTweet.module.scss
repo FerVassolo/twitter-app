@@ -1,4 +1,4 @@
-@import "../../../../styles/variables.scss";
+@import "../../../../../styles/variables";
 
 .container{
   display: flex;
@@ -10,14 +10,8 @@
 
 .imageAndInput{
   display: flex;
-  flex: 1;
   flex-direction: row;
   gap: 8px;
-}
-
-.image{
-  width: $avatar-primary-size;
-  height: $avatar-primary-size;
 }
 
 .input {

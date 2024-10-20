@@ -12,9 +12,6 @@
   text-align: center;
 }
 
-.button:hover {
-  cursor: pointer;
-}
 
 .main {
   background-color: $primary-main;
@@ -22,6 +19,7 @@
 }
 
 .main:hover {
+  cursor: pointer;
   background-color: darken($primary-main, 10%);
 }
 
@@ -31,14 +29,20 @@
 }
 
 .dark:hover {
+  cursor: pointer;
   background-color: darken($primary-dark, 10%);
 }
 
 .light{
-    background-color: $primary-light;
+  background-color: $primary-light;
   color: $white;
 }
 
-.light:hover {
-  background-color: darken($primary-light, 10%);
+.black{
+  background-color: $black;
+  color: $white;
+}
+.black:hover{
+  cursor: pointer;
+  background-color: lighten($black, 20%);
 }

@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+
+.user{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.username{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-grow: 1;
+  max-width: calc(100% - $avatar-primary-size - 8px); /* Limita el ancho del texto */
+  overflow: hidden;
+}
+
+.atName{
+  display: flex;
+  gap: 8px;
+  color: $text-2;
+  font-weight: 400;
+}

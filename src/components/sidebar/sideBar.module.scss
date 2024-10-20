@@ -10,7 +10,6 @@
   // Haciendo regla de 3 simples: 19.8%
   // aunque, pensandolo bien, y viendo como hace twitter real, el tamaño de la sidebar es FIJO.
   width: $sidebar-width;
-  height: 100vh;
   padding: $sidebar-padding $sidebar-padding 0 $sidebar-padding;
   z-index: 1;
 }
@@ -28,9 +27,31 @@
     height: auto;
 }
 
-//@include mobile{
-//  .container{
-//    flex-direction: row;
-//    width: 100%;
-//  }
-//}
+.icons{
+    display: flex;
+    flex-direction: column;
+}
+
+.textButton{
+  width: 100%;
+}
+.logoButton{
+  display: none;
+}
+
+
+@include responsive-1{
+  .container{
+    width: $icon-size;
+  }
+  .textButton{
+    display: none !important;
+  }
+  .logoButton{
+    display: inline;
+    padding: 16px;
+    height: 24px;
+    width: 24px;
+  }
+}
+

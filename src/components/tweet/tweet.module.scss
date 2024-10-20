@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap:16px;
+  font-size: 15px;
+  border-bottom: 1px solid $container-line;
+  cursor: default; // as showed in Figma
+}
+
+
+.content{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  max-width: calc(100% - $avatar-primary-size - 8px); /* Limita el ancho del texto */
+  padding-left: $avatar-primary-size + 8px;
+}
+
+.actions{
+  display: flex;
+  align-items: center;
+  padding-left: $avatar-primary-size + 8px;
+}
