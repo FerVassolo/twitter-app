@@ -1,7 +1,7 @@
 import styles from './mainFeed.module.scss';
 import Typography from "../../../../components/commons/typography/typography";
 import Tabs from "./tabs/tabs";
-import NewTweet from "./newTweet/newTweet";
+import NewTweet from "../../../../components/newTweet/newTweet";
 import TweetsDisplay from "./tweetsDisplay/tweetsDisplay";
 import ProfileImage from "../../../../components/profileImage/profileImage";
 import {useEffect, useState} from "react";

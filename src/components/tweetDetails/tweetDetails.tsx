@@ -1,7 +1,7 @@
 import styles from "./tweetDetails.module.scss";
 import Typography from "../commons/typography/typography";
 import MainTweet from "./mainTweet/mainTweet";
-import NewTweet from "../../pages/homePage/components/mainFeed/newTweet/newTweet";
+import NewTweet from "../newTweet/newTweet";
 import {useEffect, useState} from "react";
 import {getUserImage} from "../../api/api";
 import useFullTweetData from "../../hooks/useFullTweetData";

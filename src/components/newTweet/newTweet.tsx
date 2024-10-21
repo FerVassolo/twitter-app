@@ -1,7 +1,7 @@
 import styles from './newTweet.module.scss';
-import ProfileImage from "../../../../../components/profileImage/profileImage";
-import Typography from "../../../../../components/commons/typography/typography";
-import Button from "../../../../../components/button/button";
+import ProfileImage from "../profileImage/profileImage";
+import Typography from "../commons/typography/typography";
+import Button from "../button/button";
 
 type NewTweetProps = {
     image: string,
@@ -14,7 +14,7 @@ export default function NewTweet({image}: NewTweetProps){
                 {/* La imagen está mockeada porque en el JSON no existe*/}
                 <ProfileImage src={image} size={48} />
                 {/*El typography de abajo en un futuro sería un nuevo componente llamado textfield.
-                   Por el momento no lo veo necesario*/}
+                   Por el momento no lo veo necesario... */}
                 <Typography className={styles.input} variant={"h6"}>What's Happening?</Typography>
             </div>
             <div className={styles.buttons}>
