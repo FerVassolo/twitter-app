@@ -15,12 +15,15 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
-  max-width: calc(100% - $avatar-primary-size - 8px); /* Limita el ancho del texto */
-  padding-left: $avatar-primary-size + 8px;
 }
 
 .actions{
   display: flex;
   align-items: center;
-  padding-left: $avatar-primary-size + 8px;
+}
+
+.date{
+  color: $text-2;
+  font-size: 15px;
+  font-weight: 400;
 }

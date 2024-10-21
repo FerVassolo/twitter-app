@@ -31,6 +31,9 @@
   display: flex;
   flex-direction: row;
   margin-left: $sidebar-width + $sidebar-padding * 2; // side bar width + margin
+  border: 1px solid $container-line;
+  border-bottom: none;
+  border-top: none;
 }
 
 
@@ -48,7 +51,7 @@
 
 @include responsive-2{
   .innerContainer{
-      width: $home-responsive-2;
+    width: $home-responsive-2;
   }
   .right{
     display: none;

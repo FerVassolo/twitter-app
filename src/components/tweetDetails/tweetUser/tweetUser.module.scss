@@ -3,13 +3,14 @@
 .user{
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 17px;
 }
 
 .username{
   display: flex;
-  gap: 8px;
-  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
   flex-grow: 1;
   max-width: calc(100% - $avatar-primary-size - 8px); /* Limita el ancho del texto */
   overflow: hidden;

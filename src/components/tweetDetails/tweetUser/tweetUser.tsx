@@ -10,21 +10,6 @@ type TweetUserProps = {
 
 export default function TweetUser({author, date}: TweetUserProps){
 
-    function formatDate(dateString: string): string {
-        const date = new Date(dateString);
-
-        // En caso que la fecha no sea válida, por cualquiersea la razón
-        if (isNaN(date.getTime())) {
-            return "";
-        }
-
-        const options: Intl.DateTimeFormatOptions = {
-            day: 'numeric',
-            month: 'short',
-        };
-        return new Intl.DateTimeFormat('es-ES', options).format(date);
-    }
-
     return(
         <div className={styles.user}>
             <ProfileImage src={author.profilePicture} size={48}/>
@@ -32,8 +17,6 @@ export default function TweetUser({author, date}: TweetUserProps){
                 <Typography fontWeight={"600"}>{author.firstName} {author.lastName}</Typography>
                 <div className={styles.atName}>
                     <Typography>@{author.username}</Typography>
-                    <img src={"/icons/home/gray-divisor.svg"} alt={"Divisor"}/>
-                    <Typography>{formatDate(date)}</Typography>
                 </div>
             </div>
         </div>
