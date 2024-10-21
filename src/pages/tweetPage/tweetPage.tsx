@@ -18,7 +18,6 @@ export default function TweetPage() {
                 </div>
                 <div className={styles.bottomBar}>
                     <BottomBar/>
-                    <img className={styles.logoButton} src={"/icons/home/newTweet.svg"} alt={"New Tweet"}/>
                 </div>
                 <div className={styles.main}>
                     <TweetDetails tweetId={tweetId}/>
