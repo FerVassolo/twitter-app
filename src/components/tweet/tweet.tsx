@@ -1,22 +1,32 @@
 import styles from './tweet.module.scss';
-import ProfileImage from "../profileImage/profileImage";
-import Typography from "../commons/typography/typography";
 import TweetActions from "./tweetActions/tweetActions";
 import TweetUser from "./tweetUser/tweetUser";
 import TweetContent from "./tweetContent/tweetContent";
+import {useNavigate} from "react-router-dom";
+import useHomeFeedTweetData from "../../hooks/useHomeFeedTweetData";
 
 type TweetProps = {
     tweetId: string;
 }
 
 export default function Tweet({tweetId}: TweetProps){
+    const data = useHomeFeedTweetData(tweetId);
+    const navigate = useNavigate();
+    const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        // Evitar que se navegue si se hace clic en acciones (como los botones)
+        if ((e.target as HTMLElement).closest(`.${styles.actions}`)) {
+            return;
+        }
+        navigate(`/tweet/${tweetId}`);
+    };
+
     return(
-        <div className={styles.container}>
-            <TweetUser />
+        <div className={styles.container} onClick={handleClick}>
+            <TweetUser author={data.author} date={data.createdAt} />
             <div className={styles.content}>
                 <TweetContent
-                    text={"Yesterday I took my dog for a walk and suddenly it started to rain :(Luckily my dog enjoyed it"}
-                    // image={"https://random.imagecdn.app/800/600"}
+                    text={data.content}
+                    image={data.images[0]}
                 />
             </div>
             <div className={styles.actions}>
@@ -24,9 +34,9 @@ export default function Tweet({tweetId}: TweetProps){
                     tweetId={tweetId}
                     liked={false}
                     retweeted={false}
-                    likes={6}
-                    retweets={12}
-                    comments={6}
+                    likes={data.likes}
+                    retweets={data.retweets}
+                    comments={data.commentsAmount}
                 />
             </div>
         </div>

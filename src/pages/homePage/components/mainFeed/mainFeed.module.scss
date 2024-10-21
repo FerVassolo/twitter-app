@@ -1,11 +1,14 @@
 @import "../../../../styles/variables.scss";
 @import "../../../../styles/media.scss";
 .container {
+  position: sticky;
   display: flex;
   flex-direction: column;
   width: $main-width;
   border-right: 1px solid $container-line;
   border-left: 1px solid $container-line;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .header {

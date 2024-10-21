@@ -4,14 +4,23 @@ import Tabs from "./tabs/tabs";
 import NewTweet from "./newTweet/newTweet";
 import TweetsDisplay from "./tweetsDisplay/tweetsDisplay";
 import ProfileImage from "../../../../components/profileImage/profileImage";
+import {useEffect, useState} from "react";
+import {getUserImage} from "../../../../api/api";
 
 export default function MainFeed(){
+    const [image, setImage] = useState<string>("");
+
+
+    useEffect(()=> {
+        getUserImage().then((image) => setImage(image))
+    },[])
+
+
     return(
         <div className={styles.container}>
             <div className={styles.header}>
-
                 <div className={styles.responsiveTitle}>
-                    <ProfileImage src={"https://randomuser.me/api/portraits/women/25.jpg"} size={48}/>
+                    <ProfileImage src={image} size={48}/>
                     <img
                         className={styles.image}
                         alt={"Twitter Logo"}
@@ -24,7 +33,7 @@ export default function MainFeed(){
 
             <div className={styles.innerContainer}>
                 <div className={styles.newTweet}>
-                    <NewTweet/>
+                    <NewTweet image={image}/>
                 </div>
                 <TweetsDisplay/>
             </div>

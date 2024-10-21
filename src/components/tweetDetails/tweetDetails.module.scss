@@ -1,15 +1,28 @@
 @import "../../styles/variables.scss";
+@import "../../styles/media.scss";
 
 .container{
   display: flex;
   flex-direction: column;
-  padding: 16px;
   gap:16px;
   font-size: 15px;
-  border-bottom: 1px solid $container-line;
+  height: 100%;
+  min-height: 100vh;
   cursor: default; // as showed in Figma
+  width: $main-width;
 }
 
+.header {
+  position: sticky; // no está andando como quiero
+  top: 0;
+  width: $main-width;
+  background-color: $white;
+  z-index: 1;
+}
+
+.pageName {
+  padding: $main-padding;
+}
 
 .content{
   display: flex;
@@ -23,4 +36,15 @@
   display: flex;
   align-items: center;
   padding-left: $avatar-primary-size + 8px;
+}
+
+
+@include tablet {
+  .container {
+    width: 100%;
+    border: none;
+  }
+  .header {
+    width: 100%;
+  }
 }

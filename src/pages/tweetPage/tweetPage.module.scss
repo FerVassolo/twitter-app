@@ -1,0 +1,91 @@
+@import "../../styles/variables.scss";
+@import "../../styles/media.scss";
+
+.App{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.innerContainer{
+  display: flex;
+  flex-direction: row;
+  //margin: 0 5.3% 0 8.2%; // this is how it appears on figma. I will not respect it.
+  width: $home-width;
+}
+
+.sideBar{
+  left: 0;
+}
+
+.bottomBar{
+  display: none;
+}
+
+.logoButton{
+  display: none;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  margin-left: $sidebar-width + $sidebar-padding * 2; // side bar width + margin
+  border: 1px solid $container-line;
+  border-bottom: none;
+  border-top: none;
+}
+
+
+@include responsive-1{
+  .innerContainer{
+    width: $home-responsive-1;
+  }
+  .main{
+    display: flex;
+    flex-direction: row;
+    margin-left: $sidebar-responsive-1 + $sidebar-padding; // side bar width + margin
+  }
+}
+
+
+@include responsive-2{
+  .innerContainer{
+    width: $home-responsive-2;
+  }
+  .right{
+    display: none;
+  }
+}
+
+@include tablet{
+  .sideBar{
+    display: none;
+  }
+  .bottomBar{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .logoButton{
+    right: 0;
+    bottom:0;
+    position: fixed;
+    display: flex;
+    width: 53px;
+    height: auto;
+    margin-right: 16px;
+    margin-bottom: 24px + $bottom-bar-height;
+  }
+
+  .innerContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .main{
+    margin-left: 0;
+  }
+}
